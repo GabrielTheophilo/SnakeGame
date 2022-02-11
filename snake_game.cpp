@@ -132,7 +132,7 @@ int inicializa() {
         return 0;
     }
 
-    mapa = al_load_bitmap("map2.bmp");
+    mapa = al_load_bitmap("assets/map2.bmp");
     if(!mapa)
     {
         cout << "Falha ao carregar o mapa!" << endl;
@@ -141,14 +141,14 @@ int inicializa() {
     }
     al_draw_bitmap(mapa,0,0,0);
 
-    pacman = al_load_bitmap("VERDE.bmp");
+    pacman = al_load_bitmap("assets/VERDE.bmp");
     if(!pacman)
     {
         cout << "Falha ao carregar o pacman!" << endl;
         al_destroy_display(display);
         return 0;
     }
-    pacman_left = al_load_bitmap("VERMELHO.bmp");
+    pacman_left = al_load_bitmap("assets/VERMELHO.bmp");
     if(!pacman_left)
     {
         cout << "Falha ao carregar o pacman!" << endl;
@@ -156,7 +156,7 @@ int inicializa() {
         return 0;
     }
     al_draw_bitmap(pacman,posx,posy,0);
-    power_up = al_load_bitmap("MeatSmall3.bmp");
+    power_up = al_load_bitmap("assets/MeatSmall3.bmp");
     if(!power_up)
     {
         cout << "Falha ao carregar o power_up" << endl;
@@ -164,14 +164,14 @@ int inicializa() {
         return 0;
     }
 
-    power_up1 = al_load_bitmap("MeatSmall.bmp");
+    power_up1 = al_load_bitmap("assets/MeatSmall.bmp");
     if(!power_up1)
     {
         cout << "Falha ao carregar o power_up" << endl;
         al_destroy_display(display);
         return 0;
     }
-	power_up2 = al_load_bitmap("power_up2.bmp");
+	power_up2 = al_load_bitmap("assets/power_up2.bmp");
     if(!power_up2)
     {
         cout << "Falha ao carregar o power_up" << endl;
@@ -189,7 +189,7 @@ int inicializa() {
     }
     al_init_font_addon();    // INICIALIZAR AS FUNÇÕES DE FONTE 
     al_init_ttf_addon();     // INICIALIZAR ESTE ADDON -APÓS- INICIALIZAR O font_addon
-    font = al_load_ttf_font("Starjedi.ttf", 26, 0);  // carrega arquivo ttf para formato da fonte
+    font = al_load_ttf_font("assets/Starjedi.ttf", 26, 0);  // carrega arquivo ttf para formato da fonte
     al_register_event_source(event_queue, al_get_display_event_source(display));
     al_register_event_source(event_queue, al_get_timer_event_source(timer));
     al_register_event_source(event_queue, al_get_keyboard_event_source());
